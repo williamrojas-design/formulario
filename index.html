@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulario</title>
+    </head>
+  <body>
+    <div class="form-container" id="create-account-form">
+      <h2 class="form-title">Create Account</h2>
+      
+      <form class="account-form" id="registration-form" action="./results.html" method="get">
+        <div class="form-group">
+          <label for="full-name" class="form-label">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            class="form-input"
+            placeholder="Donald Dak"
+            required
+            name="full-name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email-address" class="form-label">E-mail Address</label>
+          <input
+            type="email"
+            id="email-address"
+            class="form-input"
+            placeholder="donalddak@gmail.com"
+            required
+            name="email-address" />
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="**********"
+            required
+            name="password" />
+        </div>
+
+        <div class="form-group">
+          <label for="re-password" class="form-label">Re-Password</label>
+          <input
+            type="password"
+            id="re-password"
+            class="form-input"
+            placeholder="**********"
+            required
+            name="re-password" />
+        </div>
+
+<div class="form-group">
+  <label for="select-country" class="form-label">Select Country</label>
+
+  <div id="country-selected-display" class="form-select-display">
+    <span class="placeholder">Your Country</span>
+  </div>
+
+  <div id="country-list-container" class="country-list-container hidden">
+    <ul id="country-options-list">
+      </ul>
+  </div>
+
+<select id="select-country" class="form-select" name="select-country" required hidden></select>
+
+</div>
+
+        <div class="form-checkbox-group">
+          <input
+            type="checkbox"
+            id="agree-rules"
+            class="form-checkbox"
+            required
+            name="agree-rules" />
+          <label for="agree-rules" class="checkbox-label"
+            >I agree to the Rules</label
+          >
+        </div>
+
+        <button type="submit" class="submit-button" id="create-btn" disabled>
+          Create Account
+        </button>
+      </form>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
