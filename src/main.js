@@ -18,15 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitButton = document.getElementById("create-btn");
   const form = document.getElementById("registration-form");
 
-  // NUEVAS REFERENCIAS AÑADIDAS: Elementos del custom select
+  // Elementos del listado que actúa como selector
   const countryDisplay = document.getElementById("country-selected-display");
   const countryListContainer = document.getElementById(
     "country-list-container"
   );
   const countryOptionsList = document.getElementById("country-options-list");
 
-
-  // AÑADIDO: Ocultar el select nativo para usar la versión personalizada
+  // Ocultar el select nativo para usar la versión personalizada
   selectCountry.style.display = "none";
 
   // Deshabilitar el botón 'Create Account' de entrada
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const canSubmit =
       arePasswordsSame && isEmailValid && rulesAccepted && countrySelected;
     submitButton.disabled = !canSubmit;
-
 
     if (passwordInput.value.length > 0 && rePasswordInput.value.length > 0) {
       if (arePasswordsSame) {
