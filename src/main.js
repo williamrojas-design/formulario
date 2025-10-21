@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.dataset.name = country.countryName;
 
       // Construir la URL del SVG y el HTML
-      const flagSvgUrl = `/${country.countryCode}.svg`;
+      const flagSvgUrl = `./${country.countryCode}.svg`;
       const flagHtml = `<img src="${flagSvgUrl}" alt="Bandera de ${country.countryName}" class="flag-icon">`;
 
       li.innerHTML = `${flagHtml} ${country.countryName}`;
@@ -114,8 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Ejecutar la validación del formulario
     updateSubmitButton();
-    // Disparar el evento 'change' en el select oculto para actualizar listeners
-    selectCountry.dispatchEvent(new Event("change"));
   }
 
   // Ocultar la visibilidad de la lista al hacer clic en el display
